@@ -1,0 +1,43 @@
+/* etapa 2.1 */
+/* aici definesc schema cromatica aleasa folosind selectorul root */
+
+:root {
+   
+    --primary-color: #FA591E; 
+  
+    --secondary-color: #FA811E; 
+    --accent-color: #FA3469;
+    --highlight-color: #FAA61E; 
+    --background-color: #FA9570;
+    --link-color: #861a03;
+  
+
+    --text-color: #000000; 
+    --text-light-color: #ffffff; 
+  
+    --border-color: #FA591E; 
+    
+    --active-color: #FA3469; 
+  }
+  header {
+    text-align: center;
+  }
+
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 2px solid var(--border-color);
+    transition: color 0.3s, border-color 0.3s;
+  }
+  
+  a:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+  
+ 

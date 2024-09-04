@@ -10,13 +10,25 @@ console.log(port);//testez portul
 
 
 //setarea vizualizarii paginii pentru ejs
-app.use(express.static(path.join(__dirname, 'resurse')));//pentru a accesa resurse
+//app.use(express.static(path.join(__dirname, 'resurse')));//pentru a accesa resurse
+app.use(express.static(__dirname + '/resurse'));
 app.set('view engine', 'ejs');//aici am avut o problema ca imi aparea doar portalul cu caile, de aceea a trebuit sa configurez ejs aici
 app.set('views', path.join(__dirname, 'views'));//pentru a randa paginile de tip ejs din views
 
-// Rute pentru pagina principală
-app.get(['/','/index'], (req, res) => {
-    res.render('pagini/index', { titlu: 'Pagina principală' });
+//etapa 4.8 apelul get pentru a accessa rutele de lapt pagina prinicpala
+app.get(['/','/index', '/home'], (req, res) => {
+    res.render('pagini/index', { titlu: 'Pagina principala' });
+});
+
+app.get('/:pagina', (req, res) => {
+    const pagina = req.params.pagina; // instanta al titlui paginii cerut
+    res.render(`pagini/${pagina}`, { titlu: pagina}, (err) => {
+        if(err)
+        {
+            //intai setam eroare de tip 404, apoi randam faptul ca pagina nu exista
+            res.status(404).render('pagini/404', {titlu: 'Pagina nu a fost gasita'});
+        }
+    });
 });
 
 
