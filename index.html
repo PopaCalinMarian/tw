@@ -17,6 +17,7 @@
 
 
     <meta charset="utf-8"> <!--setul de caractere-->
+    <meta name="author" content = "Popa Calin Marian">
     <meta name="description" content="Acesta platforma este destinata pentru comercializarea itemurilor din jocuri">
     <meta name="keywords" content="itemi, bazaar, gaming, rpg"> <!-- aici setez cuvintele cheie pentru seo-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +35,7 @@
     <meta name="theme-color" content="#da532c">
 
     <!-- etapa 2.1-->
-     <link rel="stylesheet" href="/resurse/stiluri.css">
+    <link rel="stylesheet" href="/resurse/stiluri.css">
 
 </head>
 
@@ -49,14 +50,24 @@
 
         <h1><b>Bazaar Items</b></h1>
 
+        <!-- etapa 2.1 partea de html-->
         <nav>
             <ul>
-                <li><a href="index.html">Acasă</a>
-                    <ul>
-                        <li><a href="#sectiunea1">Secțiunea 1</a></li>
-                        <li><a href="#sectiunea2">Secțiunea 2</a></li>
-                        <li><a href="#sectiunea3">Secțiunea 3</a></li>
+                <li><a href="index.html">Acasă</a> </li>
+                <ul>
+                    <li><a href="#sectiunea1">Secțiunea 1</a></li>
+                    <li><a href="#sectiunea2">Secțiunea 2</a></li>
+                    <li><a href="#sectiunea3">Secțiunea 3</a></li>
+                </ul>
+                <li>
+                    <a href="#">Galerii de iteme</a>
+                    <ul class="submenu">
+                        <li><a href="#">Galerie Statică</a></li>
+                        <li><a href="#">Galerie Dinamică</a></li>
                     </ul>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -64,14 +75,16 @@
 
     </header>
 
-    <main> <!-- important pt etapa 1.10 am folosit em si dfn la definitii, q la citatul de la blocquete, b la tilu si strong la alt text-->
+    <main>
+        <!-- important pt etapa 1.10 am folosit em si dfn la definitii, q la citatul de la blocquete, b la tilu si strong la alt text-->
 
         <!--etapa 1.5-->
 
         <section>
             <h2>Hai salut la site-ul meu</h2>
             <!-- etapa 1.11 link extern-->
-            <p>Descoperă mai multe informații interesante vizitând <a href="https://www.example.com">acest site extern</a>.</p>
+            <p>Descoperă mai multe informații interesante vizitând <a href="https://www.example.com">acest site
+                    extern</a>.</p>
             <!-- etapa 1.7-->
             <section id="sectiunea1">
                 <h3>Beneficiati de:</h3>
@@ -118,7 +131,7 @@
         </aside>
 
         <!-- etapa 1.12-->
-         <section>
+        <section>
             <h2>Intrebari frecvente</h2>
             <details>
                 <summary>De ce Bazaar Items si nu alta platforma?</summary>
@@ -134,7 +147,7 @@
                 <summary>Ce pot cumpara de aici?</summary>
                 <dfn>Sabii, scuturi, obiecte magice, chiar si rochii!</dfn>
             </details>
-         </section>
+        </section>
 
         <!-- etapa 1.8-->
         <section>
@@ -150,41 +163,37 @@
         </section>
 
         <!-- pt 1.11 iframe-->
-         <section>
+        <section>
             <h2>Aici aveti videoclipuri ajutatoare!</h2>
-            <iframe width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/R-zb9-FRUzc?si=uhg2vfrhodUGnnpE" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/R-zb9-FRUzc?si=uhg2vfrhodUGnnpE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
-            <iframe width="560" height="315" 
-            src="https://www.youtube.com/embed/9Y5m9euBkHU?si=I8We8CGcyCpd3rl-"
-             title="YouTube video player" frameborder="0" 
-             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-             referrerpolicy="strict-origin-when-cross-origin" 
-             allowfullscreen>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9Y5m9euBkHU?si=I8We8CGcyCpd3rl-"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
             </iframe>
-         </section>
+        </section>
 
 
     </main>
 
     <footer>
         <!-- etapa 1.13-->
-        <section>
+        <section id="contact">
             <h2>Ne puteti contacta prin urmatoarele servicii: </h2>
             <ul>
                 <li>Telefonic: <a href="tel:+4073333333">+4073333333</a></li>
-                <li>Adresa: <a href="https://www.google.com/maps?q=Facultatea+de+Matematica+si+Informatica+Bucuresti">Str. Taramul de Foc nr. 33</a></li>
+                <li>Adresa: <a
+                        href="https://www.google.com/maps?q=Facultatea+de+Matematica+si+Informatica+Bucuresti">Str.
+                        Taramul de Foc nr. 33</a></li>
                 <li>Email: <a href="mailto:contact@bazaaritems.com">contact@bazaaritems.com</a></li>
                 <li>Whatsapp: <a href="https://web.whatsapp.com/">WhatAspp Chat</a></li>
             </ul>
         </section>
-        
+
         <p><a href="/resurse/document.pdf" download="document-util">Descarcă documentul PDF</a></p>
 
         <!-- cerinta individuala etapa 1-->

@@ -1,25 +1,23 @@
+/* etapa 2.1 */
 /* aici definesc schema cromatica aleasa folosind selectorul root */
 
 :root {
-    /* Culoarea principală */
-    --primary-color: #FA591E; /* Culoarea principală - portocaliu intens */
+   
+    --primary-color: #FA591E; 
   
-    /* Culori complementare */
-    --secondary-color: #FA811E; /* Portocaliu deschis */
-    --accent-color: #FA3469; /* Roz intens */
-    --highlight-color: #FAA61E; /* Portocaliu galben */
-    --background-color: #FA9570; /* Portocaliu moale */
+    --secondary-color: #FA811E; 
+    --accent-color: #FA3469;
+    --highlight-color: #FAA61E; 
+    --background-color: #FA9570;
     --link-color: #861a03;
   
-    /* Culori text */
-    --text-color: #000000; /* Negru pentru contrast */
-    --text-light-color: #ffffff; /* Alb pentru text pe fundal închis */
+
+    --text-color: #000000; 
+    --text-light-color: #ffffff; 
   
-    /* Culori pentru bordură */
-    --border-color: #FA591E; /* Aceeași ca și culoarea principală pentru coerență */
+    --border-color: #FA591E; 
     
-    /* Culoare pentru starea activă */
-    --active-color: #FA3469; /* Roz intens pentru starea activă */
+    --active-color: #FA3469; 
   }
   header {
     text-align: center;
@@ -75,3 +73,129 @@
     transform: rotate(360deg);
   }
   
+/* etapa 2.2 */
+main {
+  display: grid;
+  grid-template-areas: 
+      "zona1 zona2 zona3"
+      "zona1 zona4 zona5"
+      "zona6 zona7 zona8";
+  gap: 20px;
+  padding: 20px;
+}
+
+.zona-1 {
+  grid-area: zona1;
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.zona-2 {
+  grid-area: zona2;
+  background-color: var(--secondary-color);
+  color: var(--text-light-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.zona-3 {
+  grid-area: zona3;
+  background-color: var(--highlight-color);
+  color: var(--text-light-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.zona-4 {
+  grid-area: zona4;
+  background-color: var(--accent-color);
+  color: var(--text-light-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.zona-5 {
+  grid-area: zona5;
+  background-color: var(--link-color);
+  color: var(--text-light-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.zona-6 {
+  grid-area: zona6;
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.zona-7 {
+  grid-area: zona7;
+  background-color: var(--secondary-color);
+  color: var(--text-light-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.zona-8 {
+  grid-area: zona8;
+  background-color: var(--highlight-color);
+  color: var(--text-light-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  main {
+      grid-template-areas: 
+          "zona1"
+          "zona2"
+          "zona3"
+          "zona4"
+          "zona5"
+          "zona6"
+          "zona7"
+          "zona8";
+      grid-template-columns: 1fr;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  p {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+      grid-template-areas: 
+          "zona1"
+          "zona2"
+          "zona3"
+          "zona4"
+          "zona5"
+          "zona6"
+          "zona7"
+          "zona8";
+      grid-template-columns: 1fr;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  p {
+      font-size: 0.875rem;
+  }
+
+  /* in caz contrar dezactivam animatiile */
+  * {
+      transition: none;
+  }
+}
