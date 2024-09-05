@@ -1,0 +1,76 @@
+@import url(/resurse/css/stiluri.css);
+html {
+    font-size: 19px;
+    font-family: "Lucida Handwriting", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#grid-pagina{ 
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1ifr); /*aici practic am patru coloane 1fr */
+    grid-template-areas: 
+    "prezentare prezentare prezentare "
+    "prezentare prezentare prezentare "
+    "utilizatori  date_utilizator date_server"
+    "calendar calendar  tabel"
+    "anunturi anunturi  tabel"
+    "diverse diverse  diverse";
+    /* aici am definit zonele din grid conform layout-ul cerut*/
+    
+}
+
+#grid-pagina>*{
+    outline: 2px solid var(--secondary-color);
+    padding: 1em;
+}
+
+#grid-pagina>figure{
+    margin: 0;
+}
+/* aici pentru fiecare clasa de tip zona-x, voi atribui atributul grid-adrea */
+.prezentare { 
+    grid-area: prezentare; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.tabel { grid-area: tabel; }
+.calendar { grid-area: calendar; }
+.anunturi { grid-area: anunturi; }
+.utilizatori { grid-area: utilizatori; }
+.date_utilizator { grid-area: date_utilizator; }
+.date_server { grid-area: date_server; }
+.diverse { grid-area: diverse; }
+
+/* pt ecran mediu */
+@media screen and (max-width:1000px){
+
+    html{
+        font-size: 15px;
+    }
+
+    #grid-pagina{
+        grid-template-columns: repeat(2,1fr);   /*1fr 1fr;*/
+        grid-template-areas: "prezentare  prezentare"
+                             "prezentare  prezentare"
+                             "utlizatori date_utilizatori"
+                             "calendar tabel "
+                             "anunturi tabel "
+                             "diverse diverse "
+    }
+}
+
+@media screen and (max-width:700px){
+
+    html{
+        font-size: 12px;
+    }
+
+    #grid-pagina{
+        display: block;
+    }
+}
+
